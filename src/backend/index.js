@@ -3,6 +3,7 @@ const pathsToRows = require('./pathsToRows')
 
 ipcMain.on('process-subtitles', (event, paths) => {
     console.log("oi")
+    
     pathsToRows(paths)
         .then(rows => console.log(rows))
         .then(() => {
